@@ -14,7 +14,7 @@ export default function Header({ home }) {
             src="/images/profile.jpg"
             alt={siteName}
           />
-          <div className="w-1/4">
+          <div className=" text-gray-800">
             <h1 className="text-4xl font-bold my-2">{siteName}</h1>
             <Tagline />
           </div>
