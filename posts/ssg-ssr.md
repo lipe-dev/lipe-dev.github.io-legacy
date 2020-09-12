@@ -1,6 +1,10 @@
 ---
 title: 'When to Use Static Generation v.s. Server-side Rendering'
 date: '2020-01-02'
+categories: ['tech']
+banner: 'https://images.unsplash.com/photo-1599845537562-65fa74c7f98b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80'
+image: 'https://www.python.org/static/community_logos/python-logo-master-v3-TM.png'
+excerpt: 'This is a small summary of this post.'
 ---
 
 We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
