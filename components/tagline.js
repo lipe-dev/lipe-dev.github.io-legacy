@@ -21,7 +21,7 @@ const taglines = [
   ["He works with computers!", "Mom"],
   ["Son, are you coding?", "Dad"],
   ["With great UX comes great usability", "Uncle Ben (Spider-Man)"],
-  ["BULK CRASH", "The Hulk (The Hulk)"],
+  ["HULK CRASH", "The Hulk (The Hulk)"],
   ["Thank you, but our diff is in another patch", "Toad (Super Mario)"],
   ["Die monster! You don't belong in this code", "Richter (Castlevania)"],
   [
@@ -42,7 +42,7 @@ export default function Tagline() {
   }, []);
 
   return (
-    <blockquote className="border-l-4 border-gray-200 px-3 italic">
+    <blockquote className="border-l-4 border-gray-200 px-3 italic text-xl">
       {taglines[index][0]} <br />
       <small className="not-italic pl-3">{taglines[index][1]}</small>
     </blockquote>
