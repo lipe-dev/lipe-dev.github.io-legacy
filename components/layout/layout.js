@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Header from "./header";
+import Footer from "./footer";
 
 export const siteName = "Felipe Pereira";
 export const siteTitle = "Lipe.dev";
@@ -25,7 +26,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header home={home} />
-      <main className="container mx-auto">{children}</main>
+      <main className="container mx-auto min-w-full">{children}</main>
       {!home && (
         <div>
           <Link href="/">
@@ -33,6 +34,7 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
