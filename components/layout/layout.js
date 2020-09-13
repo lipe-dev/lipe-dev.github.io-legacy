@@ -25,15 +25,19 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <a href="https://github.com/you" className="absolute top-0">
+        <img
+          loading="lazy"
+          width="149"
+          height="149"
+          src="https://github.blog/wp-content/uploads/2008/12/forkme_left_orange_ff7600.png?resize=149%2C149"
+          className="attachment-full size-full"
+          alt="Fork me on GitHub"
+          data-recalc-dims="1"
+        />
+      </a>
       <Header home={home} />
       <main className="container mx-auto min-w-full">{children}</main>
-      {!home && (
-        <div>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
       <Footer />
     </div>
   );
