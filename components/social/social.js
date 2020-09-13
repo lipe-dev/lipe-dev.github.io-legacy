@@ -1,6 +1,6 @@
 export default function Social() {
   return (
-    <div className="container flex mx-auto justify-center pb-4 mt-2">
+    <div className="container flex mx-auto justify-center my-4">
       <a href="mailto:fe@lipe.dev">
         <img
           className="mx-2 hover:shadow-diagonal hover:scale-105 rounded-full transform transition duration-200"
