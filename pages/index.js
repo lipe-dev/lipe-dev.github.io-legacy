@@ -12,34 +12,40 @@ export default function Home({ techPostData, folioPostData, blogPostData }) {
       <Preview
         title="What's new around here"
         posts={blogPostData}
-        morePosts="More from the blog"
+        morePosts="See all my posts"
+        linkTo="/posts/list/1"
+        home
       />
       <Preview
         title="Tech I recently fell in love with..."
         posts={techPostData}
         round
-        morePosts="See all tech I've ever loved!"
+        morePosts="Look at all tech I've ever loved!"
+        linkTo="/posts/list/tech/1"
+        home
       />
       <Preview
         title="My latest projects"
         posts={folioPostData}
-        morePosts="See my full folio here"
+        morePosts="Here is my full folio"
+        linkTo="/posts/list/folio/1"
+        home
       />
     </Layout>
   );
 }
 
 export async function getStaticProps() {
-  const techPostData = getSortedPostsData({
-    filters: { categories: ["tech"] },
-    limit: 4,
+  const { postsData: techPostData } = getSortedPostsData({
+    categories: ["tech"],
+    count: 4,
   });
-  const folioPostData = getSortedPostsData({
-    filters: { categories: ["folio"] },
-    limit: 3,
+  const { postsData: folioPostData } = getSortedPostsData({
+    categories: ["folio"],
+    count: 4,
   });
-  const blogPostData = getSortedPostsData({
-    limit: 3,
+  const { postsData: blogPostData } = getSortedPostsData({
+    count: 4,
   });
   return {
     props: {
