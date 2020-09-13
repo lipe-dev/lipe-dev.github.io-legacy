@@ -15,7 +15,7 @@ export default function Button({ Component, children, primary, ...props }) {
     "transition",
     "duration-200",
     "transform",
-    primary ? "bg-orange-400" : "bg-blue-700",
+    primary ? "bg-orange-500" : "bg-blue-700",
     "hover:shadow-diagonal",
     "hover:scale-105"
   );
