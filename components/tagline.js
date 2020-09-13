@@ -1,3 +1,4 @@
+import cn from "classnames";
 import { useEffect, useState } from "react";
 
 const taglines = [
@@ -13,7 +14,7 @@ const taglines = [
   ["Keep your code close, and your bugs closer", "Al (The Godfather)"],
   ["I feel the need - the need for script", "Tom (Top Gun)"],
   ["I'll make you a code you can't refuse", "Marlon (The Godfather II)"],
-  ["The code is a lie", "Anonymous (Portal)"],
+  ["The code is a lie", "Doug (Portal)"],
   ["You have died of Synchrony", "Narrator (Oregon Trail)"],
   ["Stay a while, and add a listener", "Decard (Diablo)"],
   ["A man codes, a program obeys", "Andrew (Bioshock)"],
@@ -32,7 +33,7 @@ const taglines = [
   ["Koichi really writes no tests... no dignity", "Josuke (Jojo's)"],
 ];
 
-export default function Tagline() {
+export default function Tagline({ home }) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -42,7 +43,16 @@ export default function Tagline() {
   }, []);
 
   return (
-    <blockquote className="border-l-4 border-gray-200 px-3 italic text-xl">
+    <blockquote
+      className={cn(
+        "border-l-4",
+        "border-gray-200",
+        "px-3",
+        "italic",
+        home ? "text-xl" : "text-md",
+        { "ml-4": !home }
+      )}
+    >
       {taglines[index][0]} <br />
       <small className="not-italic pl-3">{taglines[index][1]}</small>
     </blockquote>
