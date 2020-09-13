@@ -11,8 +11,8 @@ export default function Nav({ home, bottom }) {
         "flex",
         bottom ? "items-start" : "items-center",
         "justify-center",
-        "pb-3",
-        bottom ? "text-gray-200" : "text-gray-700",
+        "my-4",
+        bottom ? "text-gray-200" : "text-gray-800",
         { "mt-8": bottom },
         { "flex-col": bottom }
       )}
@@ -20,13 +20,13 @@ export default function Nav({ home, bottom }) {
       <NavItem href="/" bottom={bottom}>
         Home
       </NavItem>
-      <NavItem href="/" bottom={bottom}>
+      <NavItem href="/posts/list/tech/1" bottom={bottom}>
         Tech
       </NavItem>
-      <NavItem href="/" bottom={bottom}>
+      <NavItem href="/posts/list/folio/1" bottom={bottom}>
         Folio
       </NavItem>
-      <NavItem href="/" bottom={bottom}>
+      <NavItem href="/posts/list/1" bottom={bottom}>
         Blog
       </NavItem>
       <NavItem href="/" bottom={bottom}>

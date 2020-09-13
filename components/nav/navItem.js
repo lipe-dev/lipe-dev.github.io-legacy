@@ -18,7 +18,8 @@ export default function NavItem({ href, children, bottom }) {
           { "w-full": bottom },
           { "text-left": bottom },
           { "transform hover:translate-x-2": bottom },
-          { "mt-1": bottom }
+          { "mt-1": bottom },
+          "text-xl"
         )}
       >
         {children}
