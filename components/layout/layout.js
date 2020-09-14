@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
+import cn from "classnames";
+
 import Header from "./header";
 import Footer from "./footer";
 
@@ -25,7 +27,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <a href="https://github.com/you" className="absolute top-0">
+      <a href="https://github.com/you" className="fixed top-0 z-20">
         <img
           loading="lazy"
           width="149"
@@ -37,7 +39,11 @@ export default function Layout({ children, home }) {
         />
       </a>
       <Header home={home} />
-      <main className="container mx-auto min-w-full">{children}</main>
+      <main
+        className={cn("container", "mx-auto", "min-w-full", !home && "pt-20")}
+      >
+        {children}
+      </main>
       <Footer />
     </div>
   );
