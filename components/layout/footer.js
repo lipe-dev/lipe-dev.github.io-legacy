@@ -23,7 +23,7 @@ export default function Footer() {
             Feel free to steal it from Github.
           </p>
           <hr className="my-4" />
-          <Social />
+          <Social bottom />
         </div>
       </div>
     </footer>
