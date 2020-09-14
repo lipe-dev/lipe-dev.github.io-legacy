@@ -7,9 +7,9 @@ import Button from "../../../components/button";
 import Pagination from "../../../components/pagination";
 
 const categoryTitles = {
-  tech: "All tech living in my heart",
-  folio: "Here is some work I'm proud of",
-  blog: "This is all I've been posting",
+  tech: ["Tech", "Everything that has piqued my interest"],
+  folio: ["Folio", "Here is some work I'm proud of"],
+  blog: ["Blog", "This is all I've been posting"],
 };
 
 export default function PostList({ postsData, category, prevPage, nextPage }) {
@@ -18,7 +18,16 @@ export default function PostList({ postsData, category, prevPage, nextPage }) {
       <Preview
         posts={postsData}
         round={category === "tech"}
-        title={categoryTitles[category] || categoryTitles.blog}
+        title={
+          categoryTitles[category]
+            ? categoryTitles[category][0]
+            : categoryTitles.blog[0]
+        }
+        subtitle={
+          categoryTitles[category]
+            ? categoryTitles[category][1]
+            : categoryTitles.blog[1]
+        }
       />
       <Pagination
         baseUrl={`/posts/list/${category}/`}

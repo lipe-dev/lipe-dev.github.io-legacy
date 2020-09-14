@@ -10,14 +10,16 @@ export default function Home({ techPostData, folioPostData, blogPostData }) {
         <title>{siteTitle} | Home</title>
       </Head>
       <Preview
-        title="What's new around here"
+        title="Blog"
+        subtitle="What's new around here"
         posts={blogPostData}
         morePosts="See all my posts"
         linkTo="/posts/list/1"
         home
       />
       <Preview
-        title="Tech I recently fell in love with..."
+        title="Tech"
+        subtitle="Tech I recently fell in love with..."
         posts={techPostData}
         round
         morePosts="Look at all tech I've ever loved!"
@@ -25,7 +27,8 @@ export default function Home({ techPostData, folioPostData, blogPostData }) {
         home
       />
       <Preview
-        title="My latest projects"
+        title="Folio"
+        subtitle="Latest projects I've been working on"
         posts={folioPostData}
         morePosts="Here is my full folio"
         linkTo="/posts/list/folio/1"
