@@ -14,33 +14,54 @@ export default function Header({ home }) {
         "bg-orange-400",
         "shadow-straight",
         "mb-1",
-        { flex: !home },
-        { "items-center": !home },
-        { "py-2": home }
+        { "py-2": home },
+        !home && "fixed z-10"
       )}
     >
-      <div className="flex items-center mx-auto justify-center container flex-shrink-0">
-        <img
+      <div
+        className={cn(
+          "container",
+          "mx-auto",
+          { flex: !home },
+          { "items-center": !home }
+        )}
+      >
+        <div
           className={cn(
-            "rounded-full",
-            home ? "w-48" : "w-16",
-            "mx-10",
-            home ? "my-8" : "my-4"
+            "flex",
+            "items-center",
+            "mx-auto",
+            home ? "justify-center" : "justify-start",
+            "container",
+            "flex-grow"
           )}
-          src="/images/profile.jpg"
-          alt={siteName}
-        />
-        <div className={cn("text-gray-900", !home && "flex")}>
-          <h1
-            className={cn(home ? "text-4xl" : "text-2xl", "font-bold", "my-2")}
-          >
-            {siteName}
-          </h1>
-          <Tagline home={home} />
+        >
+          <img
+            className={cn(
+              "rounded-full",
+              home ? "w-48" : "w-16",
+              home ? "mx-10" : "mx-2",
+              home ? "my-8" : "my-2"
+            )}
+            src="/images/profile.jpg"
+            alt={siteName}
+          />
+          <div className={cn("text-gray-900", !home && "flex")}>
+            <h1
+              className={cn(
+                home ? "text-4xl" : "text-2xl",
+                "font-bold",
+                "my-2"
+              )}
+            >
+              {siteName}
+            </h1>
+            {home && <Tagline home={home} />}
+          </div>
         </div>
+        <Nav home={home} />
+        <Social home={home} />
       </div>
-      <Nav home={home} />
-      <Social />
     </header>
   );
 }
