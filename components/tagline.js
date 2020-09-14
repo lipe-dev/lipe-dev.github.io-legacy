@@ -50,7 +50,8 @@ export default function Tagline({ home }) {
         "px-3",
         "italic",
         home ? "text-xl" : "text-md",
-        { "ml-4": !home }
+        { "ml-4": !home },
+        !home && "flex flex-col justify-center"
       )}
     >
       {taglines[index][0]} <br />
