@@ -3,7 +3,6 @@ import Head from "next/head";
 import Layout from "../../../components/layout/layout";
 import { getAllListPaths, getSortedPostsData } from "../../../lib/posts";
 import Preview from "../../../components/preview/preview";
-import Button from "../../../components/button";
 import Pagination from "../../../components/pagination";
 
 const categoryTitles = {

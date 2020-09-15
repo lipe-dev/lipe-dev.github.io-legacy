@@ -1,7 +1,12 @@
+import { useRouter } from "next/router";
+
 import Link from "next/link";
 import cn from "classnames";
 
 export default function NavItem({ href, children, bottom }) {
+  const router = useRouter();
+  const active = router.asPath.includes(href) && href !== "/";
+
   return (
     <Link href={href}>
       <a
@@ -13,8 +18,12 @@ export default function NavItem({ href, children, bottom }) {
           "duration-200",
           "transform",
           { "hover:scale-105": !bottom },
+          { "scale-105": !bottom && active },
           bottom ? "hover:bg-blue-800" : "hover:bg-orange-300",
+          bottom && active && "bg-blue-800",
+          !bottom && active && "bg-orange-300",
           "hover:shadow-diagonal",
+          active && "shadow-diagonal",
           { "w-full": bottom },
           { "text-left": bottom },
           { "transform hover:translate-x-2": bottom },
