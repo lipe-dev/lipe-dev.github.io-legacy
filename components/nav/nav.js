@@ -7,7 +7,7 @@ export default function Nav({ home, bottom }) {
     <nav
       className={cn(
         "container",
-        "mx-auto",
+        !bottom && "mx-auto",
         "flex",
         bottom ? "items-start" : "items-center",
         "justify-center",

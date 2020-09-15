@@ -28,21 +28,21 @@ export default function Post({ postData }) {
         </div>
       </div>
       <div className="flex container mx-auto">
-        <div className="w-1/4 p-4 text-right mt-8">
+        <div className="w-1/4 p-4 text-right mt-8 sticky self-start top-24">
           <div className="text-gray-500 italic">
             Posted on <Date dateString={postData.date} />
           </div>
           <h1 className="text-4xl">{postData.title}</h1>
+
+          <summary role="doc-subtitle" className="text-gray-600 text-xl mt-4">
+            {postData.excerpt}
+          </summary>
 
           <img
             src={postData.image}
             alt={postData.excerpt}
             className="transform object-contain w-64 h-auto transition py-8 inline-block"
           />
-
-          <summary role="doc-subtitle" className="text-gray-600 text-xl mt-4">
-            {postData.excerpt}
-          </summary>
         </div>
         <div className="w-3/4 p-4 pt-10">
           <article className="min-w-full prose prose-xl ml-auto ">
