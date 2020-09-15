@@ -10,6 +10,9 @@ module.exports = {
         diagonal: "-4px 4px 0px 0px rgba(0, 0, 0, 0.3)",
         straight: "0px 8px 0px -4px rgba(0, 0, 0, 0.3)",
       },
+      height: {
+        100: "25rem",
+      },
     },
   },
   variants: {},

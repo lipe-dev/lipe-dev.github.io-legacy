@@ -1,3 +1,4 @@
+import Link from "next/link";
 import cn from "classnames";
 
 import Tagline from "../tagline";
@@ -36,26 +37,36 @@ export default function Header({ home }) {
             "flex-grow"
           )}
         >
-          <img
-            className={cn(
-              "rounded-full",
-              home ? "w-48" : "w-16",
-              home ? "mx-10" : "mx-2",
-              home ? "my-8" : "my-2"
-            )}
-            src="/images/profile.jpg"
-            alt={siteName}
-          />
+          <Link href="/">
+            <a>
+              <img
+                className={cn(
+                  "rounded-full",
+                  home ? "w-48" : "w-16",
+                  home ? "mx-10" : "mx-2",
+                  home ? "my-8" : "my-2",
+                  "hover:shadow-diagonal transition duration-200"
+                )}
+                src="/images/profile.jpg"
+                alt={siteName}
+              />
+            </a>
+          </Link>
           <div className={cn("text-gray-900", !home && "flex")}>
-            <h1
-              className={cn(
-                home ? "text-4xl" : "text-2xl",
-                "font-bold",
-                "my-2"
-              )}
-            >
-              {siteName}
-            </h1>
+            <Link href="/">
+              <a>
+                <h1
+                  className={cn(
+                    home ? "text-4xl" : "text-2xl",
+                    "font-bold",
+                    "my-2",
+                    "text-gray-900"
+                  )}
+                >
+                  {siteName}
+                </h1>
+              </a>
+            </Link>
             {home && <Tagline home={home} />}
           </div>
         </div>

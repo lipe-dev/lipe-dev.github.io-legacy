@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Head from "next/head";
 
 import Layout from "../../../components/layout/layout";
 import { getAllListPaths, getSortedPostsData } from "../../../lib/posts";
@@ -13,8 +13,14 @@ const categoryTitles = {
 };
 
 export default function PostList({ postsData, category, prevPage, nextPage }) {
+  const categoryTitle =
+    category?.charAt(0)?.toUpperCase() + category?.slice(1) || "Blog";
+
   return (
     <Layout>
+      <Head>
+        <title>Lipe.dev | {categoryTitle}</title>
+      </Head>
       <Preview
         posts={postsData}
         round={category === "tech"}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 
 import Layout from "../components/layout/layout";
 import Heading from "../components/heading";
@@ -6,6 +7,9 @@ import Heading from "../components/heading";
 export default function CV() {
   return (
     <Layout>
+      <Head>
+        <title>Lipe.dev | CV</title>
+      </Head>
       <div className="min-w-full bg-gray-200 py-8">
         <div className="container mx-auto flex py-16 justify-around bg-white shadow-diagonal">
           <div className="w-1/4 prose">

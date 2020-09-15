@@ -1,13 +1,24 @@
-export default function Heading({ subtitle, children, ...props }) {
+import cn from "classnames";
+
+export default function Heading({ subtitle, children, left, ...props }) {
   return (
-    <h1 className="text-5xl my-8 text-center text-gray-900" {...props}>
+    <h1
+      className={cn(
+        "text-5xl my-8 text-gray-900",
+        left ? "text-left" : "text-center"
+      )}
+      {...props}
+    >
       {children}
-      <p
+      <summary
         role="doc-subtitle"
-        className="italic text-2xl text-center text-gray-700"
+        className={cn(
+          "italic text-2xl text-gray-700 font-normal",
+          left ? "text-left" : "text-center"
+        )}
       >
         {subtitle}
-      </p>
+      </summary>
     </h1>
   );
 }

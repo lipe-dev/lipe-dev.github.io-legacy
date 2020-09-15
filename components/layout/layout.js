@@ -26,6 +26,7 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <title>Lipe.dev</title>
       </Head>
       <a href="https://github.com/you" className="fixed top-0 z-20">
         <img
