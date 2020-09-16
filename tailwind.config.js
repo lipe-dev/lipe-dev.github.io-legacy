@@ -8,6 +8,13 @@ module.exports = {
     extend: {
       inset: {
         24: "6rem",
+        "home-nav-offset": "-20.75rem",
+        "sm-home-nav-offset": "-29.75rem",
+        "md-home-nav-offset": "-21.5rem",
+        "page-nav-offset": "-12.75rem",
+        "sm-page-nav-offset": "-12.75rem",
+        "md-page-nav-offset": "-9.75rem",
+        "lg-page-nav-offset": "0",
       },
       boxShadow: {
         diagonal: "-4px 4px 0px 0px rgba(0, 0, 0, 0.3)",

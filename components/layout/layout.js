@@ -28,21 +28,21 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
         <title>Lipe.dev</title>
       </Head>
-      <a href="https://github.com/you" className="fixed top-0 z-20">
-        <img
-          loading="lazy"
-          width="149"
-          height="149"
-          src="https://github.blog/wp-content/uploads/2008/12/forkme_left_orange_ff7600.png?resize=149%2C149"
-          className="attachment-full size-full"
-          alt="Fork me on GitHub"
-          data-recalc-dims="1"
-        />
-      </a>
+      {home && (
+        <a href="https://github.com/you" className="absolute top-0 z-50">
+          <img
+            loading="lazy"
+            width="149"
+            height="149"
+            src="https://github.blog/wp-content/uploads/2008/12/forkme_left_orange_ff7600.png?resize=149%2C149"
+            className="attachment-full size-full"
+            alt="Fork me on GitHub"
+            data-recalc-dims="1"
+          />
+        </a>
+      )}
       <Header home={home} />
-      <main
-        className={cn("container", "mx-auto", "min-w-full", !home && "pt-20")}
-      >
+      <main className={cn("container", "mx-auto", "min-w-full")}>
         {children}
       </main>
       <Footer />

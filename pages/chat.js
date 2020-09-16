@@ -26,36 +26,36 @@ export default function Chat() {
           What about the dog pics?
         </Heading>
 
-        <div className="flex flex-wrap items-center mb-8">
-          <div className="w-1/5 p-2">
+        <div className="flex flex-wrap items-center mb-8 justify-center">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/5 p-8 sm:p-4">
             <img
               className="w-full h-auto shadow-diagonal transform transition duration-200 hover:scale-150"
               src="/images/dogs/babydogs.jpg"
               alt="baby sombra and shock"
             />
           </div>
-          <div className="w-1/5 p-2">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/5 p-8 sm:p-4">
             <img
               className="w-full h-auto shadow-diagonal transform transition duration-200 hover:scale-150"
               src="/images/dogs/happyshock.png"
               alt="happy shock"
             />
           </div>
-          <div className="w-1/5 p-2">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/5 p-8 sm:p-4">
             <img
               className="w-full h-auto shadow-diagonal transform transition duration-200 hover:scale-150"
               src="/images/dogs/seriousandrelaxed.jpg"
               alt="serious and relaxed"
             />
           </div>
-          <div className="w-1/5 p-2">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/5 p-8 sm:p-4">
             <img
               className="w-full h-auto shadow-diagonal transform transition duration-200 hover:scale-150"
               src="/images/dogs/snacktime.png"
               alt="snack time"
             />
           </div>
-          <div className="w-1/5 p-2">
+          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/5 p-8 sm:p-4">
             <img
               className="w-full h-auto shadow-diagonal transform transition duration-200 hover:scale-150"
               src="/images/dogs/sombersombra.png"

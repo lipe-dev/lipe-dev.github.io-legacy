@@ -5,13 +5,13 @@ import Button from "../button";
 
 export default function PostPreview({ post, round }) {
   return (
-    <div className={cn(round ? "w-1/4" : "w-1/2", "my-4")}>
+    <div className={cn(round ? "w-1/2 md:w-1/4" : "w-full md:w-1/2", "my-4")}>
       <div
         className={cn(
           "mx-4",
           { "bg-gray-200": !round },
           { "hover:shadow-straight": !round },
-          "transform hover:scale-105",
+          "sm:transform hover:scale-105",
           "transition",
           "duration-200",
           "flex",
@@ -26,7 +26,7 @@ export default function PostPreview({ post, round }) {
           className={cn(
             "overflow-hidden",
             { "rounded-full": round },
-            round ? "w-64 h-64" : "w-full",
+            round ? "w-40 h-40 md:w-64 md:max-h-64 lg:w-56 lg:h-56" : "w-full",
             "max-w-full",
             { "mx-auto": round },
             "relative"
@@ -39,7 +39,9 @@ export default function PostPreview({ post, round }) {
               "transform",
               round ? "hover:scale-110" : "hover:scale-110",
               round ? "object-contain" : "object-cover",
-              round ? "w-64 h-64" : "w-full",
+              round
+                ? "w-40 h-40 md:w-64 md:max-h-64 lg:w-56 lg:h-56"
+                : "w-full",
               "transition",
               "duration-1000",
               { "rounded-full": round },

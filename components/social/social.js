@@ -7,10 +7,10 @@ export default function Social({ home, bottom, cards }) {
         "container",
         "flex",
         "mx-auto",
-        { "justify-center": home || bottom },
-        { "justify-end": !home && !bottom },
+        "justify-center",
         !home && "mx-2",
-        "flex-shrink"
+        "flex-shrink",
+        cards && "flex-col md:flex-row"
       )}
     >
       <a

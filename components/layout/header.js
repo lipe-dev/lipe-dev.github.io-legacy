@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Link from "next/link";
 import cn from "classnames";
 
@@ -7,6 +8,11 @@ import Social from "../social/social";
 import { siteName } from "./layout";
 
 export default function Header({ home }) {
+  const [expanded, setExpanded] = useState(false);
+
+  // Mobile: home ? "-20.75rem" : "-12.75rem"
+  // Desktop: home ? "-21.5rem" : "0"
+
   return (
     <header
       className={cn(
@@ -15,8 +21,11 @@ export default function Header({ home }) {
         "bg-orange-400",
         "shadow-straight",
         "mb-1",
-        { "py-2": home },
-        !home && "fixed z-10"
+        "sticky",
+        "z-40",
+        home
+          ? "top-home-nav-offset sm:top-sm-home-nav-offset md:top-md-home-nav-offset"
+          : "top-page-nav-offset sm:top-sm-page-nav-offset md:top-md-page-nav-offset lg:top-lg-page-nav-offset"
       )}
     >
       <div
@@ -24,27 +33,29 @@ export default function Header({ home }) {
           "container",
           "mx-auto",
           { flex: !home },
-          { "items-center": !home }
+          { "items-center": !home },
+          !home && "flex-wrap lg:flex-no-wrap"
         )}
       >
         <div
           className={cn(
-            "flex",
+            "flex flex-wrap",
             "items-center",
             "mx-auto",
-            home ? "justify-center" : "justify-start",
+            home ? "justify-center" : "justify-center lg:justify-start",
             "container",
+            "w-full",
             "flex-grow"
           )}
         >
           <Link href="/">
-            <a>
+            <a className="w-full md:w-auto">
               <img
                 className={cn(
                   "rounded-full",
-                  home ? "w-48" : "w-16",
-                  home ? "mx-10" : "mx-2",
-                  home ? "my-8" : "my-2",
+                  home ? "w-32 sm:w-48" : "w-16",
+                  home ? "mx-auto md:mx-10" : "mx-auto md:mx-2",
+                  home ? "my-2 sm:my-8" : "my-2",
                   "hover:shadow-diagonal transition duration-200"
                 )}
                 src="/images/profile.jpg"
@@ -57,7 +68,8 @@ export default function Header({ home }) {
               <a>
                 <h1
                   className={cn(
-                    home ? "text-4xl" : "text-2xl",
+                    home ? "text-2xl sm:text-4xl" : "text-2xl",
+                    "text-center md:text-left",
                     "font-bold",
                     "my-2",
                     "text-gray-900"
@@ -70,8 +82,8 @@ export default function Header({ home }) {
             {home && <Tagline home={home} />}
           </div>
         </div>
-        <Nav home={home} />
         <Social home={home} />
+        <Nav home={home} />
       </div>
     </header>
   );

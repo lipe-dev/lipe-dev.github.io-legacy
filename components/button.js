@@ -5,11 +5,12 @@ export default function Button({ Component, children, primary, ...props }) {
   const classNames = cn(
     "box-border",
     "inline-block",
-    "p-4",
+    "p-3 sm:p-4",
     "mx-auto",
     "mt-4",
     "mb-4",
     "font-bold",
+    "text-sm sm:text-md",
     "text-gray-200",
     "uppercase",
     "transition",

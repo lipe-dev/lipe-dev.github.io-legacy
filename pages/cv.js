@@ -11,14 +11,18 @@ export default function CV() {
         <title>Lipe.dev | CV</title>
       </Head>
       <div className="min-w-full bg-gray-200 py-8">
-        <div className="container mx-auto flex py-16 justify-around bg-white shadow-diagonal">
-          <div className="w-1/4 prose">
+        <div className="container mx-auto flex flex-col sm:flex-row flex-wrap py-16 justify-around bg-white shadow-diagonal">
+          <div className="w-full -mt-8">
+            <Heading subtitle="Software Engineer">
+              Felipe &quot;lipe-dev&quot; Pereira
+            </Heading>
+          </div>
+          <div className="w-full sm:w-1/3 lg:w-1/4 prose prose-md md:prose-lg lg:prose-xl p-4 flex items-stretch flex-col">
             <img
               src="/images/profile.jpg"
               alt="Felipe Pereira"
-              className="shadow-diagonal"
+              className="shadow-diagonal self-center"
             />
-
             <h2> Contact </h2>
             <ul>
               <li>
@@ -71,11 +75,7 @@ export default function CV() {
               </li>
             </ul>
           </div>
-          <div className="w-3/4 prose ">
-            <Heading subtitle="Software Engineer">
-              Felipe "lipe-dev" Pereira
-            </Heading>
-
+          <div className="w-full sm:w-2/3 lg:w-3/4 prose prose-md md:prose-lg lg:prose-xl p-4">
             <h2>Notable Skills</h2>
             <ul>
               <li>Front-End Development</li>

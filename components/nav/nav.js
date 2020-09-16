@@ -7,13 +7,15 @@ export default function Nav({ home, bottom }) {
     <nav
       className={cn(
         "container",
+        !bottom && "h-20",
         !bottom && "mx-auto",
         "flex",
         bottom ? "items-start" : "items-center",
         "justify-center",
-        "my-4",
+        home && "my-4",
         bottom ? "text-gray-200" : "text-gray-800",
         { "mt-8": bottom },
+        { "sm:flex-row": !bottom && !home },
         { "flex-col": bottom },
         "flex-grow"
       )}

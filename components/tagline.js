@@ -49,7 +49,7 @@ export default function Tagline({ home }) {
         "border-gray-200",
         "px-3",
         "italic",
-        home ? "text-xl" : "text-md",
+        home ? "text-md sm:text-xl" : "text-md",
         { "ml-4": !home },
         !home && "flex flex-col justify-center"
       )}

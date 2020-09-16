@@ -24,8 +24,10 @@ export default function NavItem({ href, children, bottom }) {
           !bottom && active && "bg-orange-300",
           "hover:shadow-diagonal",
           active && "shadow-diagonal",
-          { "w-full": bottom },
-          { "text-left": bottom },
+          "w-full",
+          !bottom && "sm:w-auto",
+          "text-center",
+          { "text-center sm:text-left": bottom },
           { "transform hover:translate-x-2": bottom },
           { "mt-1": bottom },
           "text-xl"
