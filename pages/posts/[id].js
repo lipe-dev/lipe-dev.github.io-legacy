@@ -27,12 +27,12 @@ export default function Post({ postData }) {
           </div>
         </div>
       </div>
-      <div className="flex container mx-auto">
-        <div className="w-1/4 p-4 text-right mt-8 sticky self-start top-24">
-          <div className="text-gray-500 italic">
+      <div className="flex flex-wrap md:flex-no-wrap container mx-auto">
+        <div className="w-full md:w-1/4 p-4 text-center md:text-right mt-8 md:sticky self-start top-24">
+          <div className="text-gray-500 italic hidden md:block">
             Posted on <Date dateString={postData.date} />
           </div>
-          <h1 className="text-4xl">{postData.title}</h1>
+          <h1 className="text-4xl hidden md:block">{postData.title}</h1>
 
           <summary role="doc-subtitle" className="text-gray-600 text-xl mt-4">
             {postData.excerpt}
@@ -41,10 +41,10 @@ export default function Post({ postData }) {
           <img
             src={postData.image}
             alt={postData.excerpt}
-            className="transform object-contain w-64 h-auto transition py-8 inline-block"
+            className="transform object-contain w-64 h-auto transition pt-8 inline-block"
           />
         </div>
-        <div className="w-3/4 p-4 pt-10">
+        <div className="w-full md:w-3/4 p-4 pt-10">
           <article className="min-w-full prose prose-xl ml-auto ">
             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
           </article>
