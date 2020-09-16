@@ -1,10 +1,32 @@
 @tailwind base;
 
 /* Write your own custom base styles here */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Cairo Regular'), local('Cairo-Regular'), url(https://fonts.gstatic.com/s/cairo/v8/SLXGc1nY6HkvalIhTps.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
+
+@layer base {
+    h1,h2,h3,h4,h5,h6 {
+        @apply font-heading
+    }
+}
 
 /* Start purging... */
 @tailwind utilities;

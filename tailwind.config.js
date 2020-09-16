@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -6,6 +8,10 @@ module.exports = {
   purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
+        heading: ["Cairo", "Source Sans Pro", ...defaultTheme.fontFamily.sans],
+      },
       inset: {
         24: "6rem",
         "home-nav-offset": "-20.75rem",
