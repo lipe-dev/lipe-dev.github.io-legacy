@@ -21,24 +21,24 @@ You don't have to credit me or anything. This is MIT. I would, however, love to 
 ```sh
 git clone git@github.com:lipe-dev/lipe-dev.github.io.git
 ```
-- Set everything up with 
+- Set everything up 
 ```sh
+# with yarn
 yarn install
-```
-or 
-```sh
+
+# or with npm
 npm install
-``` 
-- Run it with 
-```sh
-yarn dev
 ```
-or 
+- Run it 
 ```sh
+# with yarn
+yarn dev
+
+# or with npm
 npm run dev
 ```
 
-# License
+# License and MIT yada yada
 
 Copyright 2020 Lipe.dev
 
