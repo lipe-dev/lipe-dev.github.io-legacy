@@ -15,6 +15,7 @@ export default function Heading({ subtitle, children, left, ...props }) {
       <span
         role="doc-subtitle"
         className={cn(
+          "block",
           "italic",
           "text-lg sm:text-2xl text-gray-700 font-normal",
           left ? "text-left" : "text-center"
