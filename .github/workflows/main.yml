@@ -23,9 +23,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v2
 
+      # Define a Node.js version to use
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
       # Build using next build and next export
       - name: Install and Build 🔧
-        uses: actions/setup-node@v1
         run: |
           yarn install --frozen-lockfile
           yarn build
