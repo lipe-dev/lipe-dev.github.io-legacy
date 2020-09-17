@@ -34,9 +34,12 @@ export default function Post({ postData }) {
           </div>
           <h1 className="text-4xl hidden md:block">{postData.title}</h1>
 
-          <summary role="doc-subtitle" className="text-gray-600 text-xl mt-4">
+          <span
+            role="doc-subtitle"
+            className="text-gray-600 text-xl mt-4 block"
+          >
             {postData.excerpt}
-          </summary>
+          </span>
 
           <img
             src={postData.image}
