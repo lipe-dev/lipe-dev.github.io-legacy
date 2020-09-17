@@ -12,7 +12,7 @@ export default function Heading({ subtitle, children, left, ...props }) {
       {...props}
     >
       {children}
-      <summary
+      <span
         role="doc-subtitle"
         className={cn(
           "italic",
@@ -21,7 +21,7 @@ export default function Heading({ subtitle, children, left, ...props }) {
         )}
       >
         {subtitle}
-      </summary>
+      </span>
     </h1>
   );
 }
