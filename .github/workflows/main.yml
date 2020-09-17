@@ -21,10 +21,11 @@ jobs:
     steps:
       - name: Checkout 🛎️
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       # Build using next build and next export
-      - name: Install and Build 🔧 
+      - name: Install and Build 🔧
+        uses: actions/setup-node@v1
         run: |
           yarn install --frozen-lockfile
           yarn build
