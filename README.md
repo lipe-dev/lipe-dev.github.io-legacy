@@ -1,5 +1,7 @@
 # Welcome to lipe.dev!
 
+![Lipe.dev Logo](https://raw.githubusercontent.com/lipe-dev/lipe-dev.github.io/6773215346e5401d5956bbb9fa39ac5f2745dc30/public/images/posts/lipe-dev.svg)
+
 This is my personal website, built with [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.or).
 
 ## Get in touch
