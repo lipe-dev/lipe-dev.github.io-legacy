@@ -10,7 +10,8 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>Lipe.dev | {postData.title}</title>
-        <meta property="og:image" content={postData.banner} />
+        <meta name="description" content={postData.excerpt} />
+        <meta property="og:image:secure_url" content={postData.banner} />
         <meta name="og:title" content={postData.title} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
