@@ -13,6 +13,10 @@ export default function Layout({ children, home }) {
     <div className="container min-w-full">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Felipe &#34;lipe-dev&#34; Pereira&#39;s home on the internet."
+        />
         <meta property="og:image" content="/images/posts/lipe-dev.svg" />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
