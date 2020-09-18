@@ -14,7 +14,7 @@ export default function Post({ postData }) {
         <meta name="og:title" content={postData.title} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className="mt-1 h-banner relative">
+      <div className="-mt-1 h-banner relative">
         <img
           className="object-cover h-banner w-full"
           src={postData.banner}
