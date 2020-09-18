@@ -1,18 +1,19 @@
-import Layout from "../../components/layout/layout";
+import { useEffect } from "react";
+
+import Layout, { siteName } from "../../components/layout/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
-import Heading from "../../components/heading";
 
 export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>Lipe.dev | {postData.title}</title>
       </Head>
-      <div className="mt-1 h-100 relative">
+      <div className="mt-1 h-banner relative">
         <img
-          className="object-cover h-100 w-full"
+          className="object-cover h-banner w-full"
           src={postData.banner}
           alt={postData.title}
         />

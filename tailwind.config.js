@@ -28,6 +28,7 @@ module.exports = {
       },
       height: {
         100: "25rem",
+        banner: "35rem",
       },
     },
   },

@@ -26,6 +26,7 @@ export default function PostPreview({ post, round }) {
           className={cn(
             "overflow-hidden",
             { "rounded-full": round },
+            "h-100",
             round ? "w-40 h-40 md:w-64 md:max-h-64 lg:w-56 lg:h-56" : "w-full",
             "max-w-full",
             { "mx-auto": round },
@@ -50,7 +51,7 @@ export default function PostPreview({ post, round }) {
             )}
           />
           {!round && (
-            <h2 className="absolute bottom-0 text-3xl p-4 text-white bg-blue-900 w-full bg-opacity-25">
+            <h2 className="absolute bottom-0 text-3xl p-4 text-white bg-blue-900 w-full bg-opacity-50">
               {post.title}
             </h2>
           )}
