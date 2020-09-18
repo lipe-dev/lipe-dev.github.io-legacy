@@ -26,6 +26,14 @@
     h1,h2,h3,h4,h5,h6 {
         @apply font-heading
     }
+    h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
+        display: block;
+        content: " ";
+        margin-top: -8rem;
+        height: 8rem;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 /* Start purging... */

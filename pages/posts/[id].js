@@ -28,27 +28,25 @@ export default function Post({ postData }) {
         </div>
       </div>
       <div className="flex flex-wrap md:flex-no-wrap container mx-auto">
-        <div className="w-full md:w-1/4 p-4 text-center md:text-right mt-8 md:sticky self-start top-24">
-          <div className="text-gray-500 italic hidden md:block">
-            Posted on <Date dateString={postData.date} />
-          </div>
-          <h1 className="text-4xl hidden md:block">{postData.title}</h1>
-
-          <span
-            role="doc-subtitle"
-            className="text-gray-600 text-xl mt-4 block"
-          >
-            {postData.excerpt}
-          </span>
-
+        <div className="w-full md:w-1/4 p-4 text-center md:text-left mt-8 md:sticky self-start top-24">
+          <div
+            className="prose prose-xl sm:prose-sm text-left"
+            dangerouslySetInnerHTML={{ __html: postData.tocHtml }}
+          />
           <img
             src={postData.image}
             alt={postData.excerpt}
-            className="transform object-contain w-64 h-auto transition pt-8 inline-block"
+            className="transform object-contain w-64 h-auto transition py-4 inline-block"
           />
         </div>
         <div className="w-full md:w-3/4 p-4 pt-10">
           <article className="min-w-full prose prose-xl ml-auto ">
+            <blockquote
+              role="doc-subtitle"
+              className="text-gray-600 text-2xl mt-4 block"
+            >
+              {postData.excerpt}
+            </blockquote>
             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
           </article>
         </div>
