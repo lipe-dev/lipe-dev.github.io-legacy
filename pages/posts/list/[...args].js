@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Layout from "../../../components/layout/layout";
+import Layout, { siteTitle } from "../../../components/layout/layout";
 import { getAllListPaths, getSortedPostsData } from "../../../lib/posts";
 import Preview from "../../../components/preview/preview";
 import Pagination from "../../../components/pagination";
@@ -19,6 +19,9 @@ export default function PostList({ postsData, category, prevPage, nextPage }) {
     <Layout>
       <Head>
         <title>Lipe.dev | {categoryTitle}</title>
+        <meta property="og:image" content="/images/posts/lipe-dev.svg" />
+        <meta name="og:title" content={`Lipe.dev's ${category} posts`} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Preview
         posts={postsData}

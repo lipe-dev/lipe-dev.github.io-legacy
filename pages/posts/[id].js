@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import Layout, { siteName } from "../../components/layout/layout";
+import Layout, { siteName, siteTitle } from "../../components/layout/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
@@ -10,6 +10,9 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>Lipe.dev | {postData.title}</title>
+        <meta property="og:image" content={postData.banner} />
+        <meta name="og:title" content={postData.title} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className="mt-1 h-banner relative">
         <img
