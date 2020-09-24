@@ -57,9 +57,9 @@ export default function Preview({
 
 Preview.propTypes = {
   title: PropTypes.string.isRequired,
-  home: PropTypes.boolean,
+  home: PropTypes.bool,
   posts: PropTypes.arrayOf(CustomPropTypes.postData),
-  round: PropTypes.boolean,
+  round: PropTypes.bool,
   morePosts: PropTypes.string.isRequired,
   linkTo: PropTypes.string,
   subtitle: PropTypes.string,

@@ -85,6 +85,6 @@ export default function Social({ home, cards }) {
 }
 
 Social.propTypes = {
-  home: PropTypes.boolean,
-  cards: PropTypes.boolean,
+  home: PropTypes.bool,
+  cards: PropTypes.bool,
 };

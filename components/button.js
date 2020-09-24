@@ -43,5 +43,5 @@ export default function Button({ Component, children, primary, ...props }) {
 Button.propTypes = {
   Component: PropTypes.elementType,
   children: PropTypes.node,
-  primary: PropTypes.boolean,
+  primary: PropTypes.bool,
 };

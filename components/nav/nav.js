@@ -45,6 +45,6 @@ export default function Nav({ home, bottom }) {
 }
 
 Nav.propTypes = {
-  bottom: PropTypes.boolean,
-  home: PropTypes.boolean,
+  bottom: PropTypes.bool,
+  home: PropTypes.bool,
 };

@@ -31,5 +31,5 @@ export default function Heading({ subtitle, children, left, ...props }) {
 Heading.propTypes = {
   subtitle: PropTypes.string.isRequired,
   children: PropTypes.node,
-  left: PropTypes.boolean,
+  left: PropTypes.bool,
 };

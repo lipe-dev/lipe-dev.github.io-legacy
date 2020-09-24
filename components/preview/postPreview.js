@@ -98,5 +98,5 @@ export default function PostPreview({ post, round }) {
 
 PostPreview.propTypes = {
   post: CustomPropTypes.postData.isRequired,
-  round: PropTypes.boolean,
+  round: PropTypes.bool,
 };

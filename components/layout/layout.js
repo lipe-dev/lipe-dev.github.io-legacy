@@ -50,5 +50,5 @@ export default function Layout({ children, home }) {
 
 Layout.propTypes = {
   children: PropTypes.node,
-  home: PropTypes.boolean,
+  home: PropTypes.bool,
 };

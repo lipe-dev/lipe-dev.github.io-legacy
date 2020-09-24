@@ -63,5 +63,5 @@ export default function Tagline({ home }) {
 }
 
 Tagline.propTypes = {
-  home: PropTypes.boolean,
+  home: PropTypes.bool,
 };

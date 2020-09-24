@@ -31,7 +31,7 @@ export default function NavItem({ href, children, bottom }) {
           { "text-center sm:text-left": bottom },
           { "transform hover:translate-x-2": bottom },
           { "mt-1": bottom },
-          "text-xl"
+          "text-md sm:text-xl"
         )}
       >
         {children}
@@ -43,5 +43,5 @@ export default function NavItem({ href, children, bottom }) {
 NavItem.propTypes = {
   href: PropTypes.string.isRequired,
   children: PropTypes.node,
-  bottom: PropTypes.boolean,
+  bottom: PropTypes.bool,
 };
