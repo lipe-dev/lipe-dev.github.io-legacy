@@ -1,5 +1,7 @@
-import cn from "classnames";
 import { useEffect, useState } from "react";
+
+import cn from "classnames";
+import PropTypes from "prop-types";
 
 const taglines = [
   ["I'm the dev guy", "Billie"],
@@ -59,3 +61,7 @@ export default function Tagline({ home }) {
     </blockquote>
   );
 }
+
+Tagline.propTypes = {
+  home: PropTypes.boolean,
+};

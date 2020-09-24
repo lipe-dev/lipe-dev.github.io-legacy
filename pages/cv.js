@@ -221,6 +221,12 @@ export default function CV() {
             </li>
           </div>
         </div>
+        <a
+          className="container mx-auto py-4 my-4 bg-white shadow-diagonal block z-40 underline text-center"
+          href="/docs/felipe-pereira_lipe.dev_CV.pdf"
+        >
+          Downlaod my CV as PDF here
+        </a>
       </div>
     </Layout>
   );

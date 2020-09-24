@@ -1,7 +1,11 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout/layout";
-import { getSortedPostsData } from "../lib/posts";
-import Preview from "../components/preview/preview";
+
+import PropTypes from "prop-types";
+import CustomPropTypes from "propTypes";
+
+import { getSortedPostsData } from "lib/posts";
+import Layout, { siteTitle } from "components/layout/layout";
+import Preview from "components/preview/preview";
 
 export default function Home({ techPostData, folioPostData, blogPostData }) {
   return (
@@ -58,3 +62,9 @@ export async function getStaticProps() {
     },
   };
 }
+
+Home.propTypes = {
+  techPostData: PropTypes.arrayOf(CustomPropTypes.postData),
+  folioPostData: PropTypes.arrayOf(CustomPropTypes.postData),
+  blogPostData: PropTypes.arrayOf(CustomPropTypes.postData),
+};

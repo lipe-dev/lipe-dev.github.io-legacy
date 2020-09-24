@@ -1,5 +1,7 @@
 import cn from "classnames";
 
+import PropTypes from "prop-types";
+
 import NavItem from "./navItem";
 
 export default function Nav({ home, bottom }) {
@@ -41,3 +43,8 @@ export default function Nav({ home, bottom }) {
     </nav>
   );
 }
+
+Nav.propTypes = {
+  bottom: PropTypes.boolean,
+  home: PropTypes.boolean,
+};

@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
+
 import cn from "classnames";
+import PropTypes from "prop-types";
 
 import Header from "./header";
 import Footer from "./footer";
@@ -46,3 +47,8 @@ export default function Layout({ children, home }) {
     </div>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node,
+  home: PropTypes.boolean,
+};

@@ -1,7 +1,8 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 
-import Link from "next/link";
 import cn from "classnames";
+import PropTypes from "prop-types";
 
 export default function NavItem({ href, children, bottom }) {
   const router = useRouter();
@@ -38,3 +39,9 @@ export default function NavItem({ href, children, bottom }) {
     </Link>
   );
 }
+
+NavItem.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  bottom: PropTypes.boolean,
+};

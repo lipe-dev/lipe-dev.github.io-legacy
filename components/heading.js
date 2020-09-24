@@ -1,4 +1,5 @@
 import cn from "classnames";
+import PropTypes from "prop-types";
 
 export default function Heading({ subtitle, children, left, ...props }) {
   return (
@@ -26,3 +27,9 @@ export default function Heading({ subtitle, children, left, ...props }) {
     </h1>
   );
 }
+
+Heading.propTypes = {
+  subtitle: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  left: PropTypes.boolean,
+};

@@ -1,6 +1,9 @@
 import Head from "next/head";
 
-import Layout, { siteTitle } from "../../../components/layout/layout";
+import PropTypes from "prop-types";
+import CustomPropTypes from "propTypes";
+
+import Layout from "../../../components/layout/layout";
 import { getAllListPaths, getSortedPostsData } from "../../../lib/posts";
 import Preview from "../../../components/preview/preview";
 import Pagination from "../../../components/pagination";
@@ -48,6 +51,13 @@ export default function PostList({ postsData, category, prevPage, nextPage }) {
     </Layout>
   );
 }
+
+PostList.propTypes = {
+  postsData: PropTypes.arrayOf(CustomPropTypes.postData).isRequired,
+  category: PropTypes.string.isRequired,
+  prevPage: PropTypes.number,
+  nextPage: PropTypes.number,
+};
 
 export async function getStaticPaths() {
   const paths = getAllListPaths();

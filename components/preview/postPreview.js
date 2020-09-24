@@ -1,7 +1,11 @@
 import Link from "next/link";
+
 import cn from "classnames";
-import Date from "../date";
-import Button from "../button";
+import PropTypes from "prop-types";
+import CustomPropTypes from "propTypes";
+
+import Date from "components/date";
+import Button from "components/button";
 
 export default function PostPreview({ post, round }) {
   return (
@@ -91,3 +95,8 @@ export default function PostPreview({ post, round }) {
     </div>
   );
 }
+
+PostPreview.propTypes = {
+  post: CustomPropTypes.postData.isRequired,
+  round: PropTypes.boolean,
+};

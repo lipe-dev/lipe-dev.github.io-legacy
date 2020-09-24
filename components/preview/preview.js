@@ -1,9 +1,12 @@
 import Link from "next/link";
 
-import PostPreview from "./postPreview";
 import cn from "classnames";
-import Button from "../button";
-import Heading from "../heading";
+import PropTypes from "prop-types";
+
+import PostPreview from "./postPreview";
+import Button from "components/button";
+import Heading from "components/heading";
+import CustomPropTypes from "propTypes";
 
 export default function Preview({
   title,
@@ -51,3 +54,13 @@ export default function Preview({
     </section>
   );
 }
+
+Preview.propTypes = {
+  title: PropTypes.string.isRequired,
+  home: PropTypes.boolean,
+  posts: PropTypes.arrayOf(CustomPropTypes.postData),
+  round: PropTypes.boolean,
+  morePosts: PropTypes.string.isRequired,
+  linkTo: PropTypes.string,
+  subtitle: PropTypes.string,
+};

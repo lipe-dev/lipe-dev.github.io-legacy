@@ -1,5 +1,7 @@
-import cn from "classnames";
 import Link from "next/link";
+
+import cn from "classnames";
+import PropTypes from "prop-types";
 
 export default function Button({ Component, children, primary, ...props }) {
   const classNames = cn(
@@ -37,3 +39,9 @@ export default function Button({ Component, children, primary, ...props }) {
     </button>
   );
 }
+
+Button.propTypes = {
+  Component: PropTypes.elementType,
+  children: PropTypes.node,
+  primary: PropTypes.boolean,
+};

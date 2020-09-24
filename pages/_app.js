@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import "../styles/index.css";
 import hljs from "highlight.js/lib/core";
 import yaml from "highlight.js/lib/languages/yaml";
@@ -10,5 +12,10 @@ hljs.registerLanguage("diff", diff);
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
+
+MyApp.propTypes = {
+  Component: PropTypes.node,
+  pageProps: PropTypes.shape({}),
+};
 
 export default MyApp;

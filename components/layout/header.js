@@ -1,18 +1,14 @@
-import { useState } from "react";
 import Link from "next/link";
-import cn from "classnames";
 
-import Tagline from "../tagline";
-import Nav from "../nav/nav";
-import Social from "../social/social";
+import cn from "classnames";
+import PropTypes from "prop-types";
+
+import Tagline from "components/tagline";
+import Nav from "components/nav/nav";
+import Social from "components/social/social";
 import { siteName } from "./layout";
 
 export default function Header({ home }) {
-  const [expanded, setExpanded] = useState(false);
-
-  // Mobile: home ? "-20.75rem" : "-12.75rem"
-  // Desktop: home ? "-21.5rem" : "0"
-
   return (
     <header
       className={cn(
@@ -88,3 +84,7 @@ export default function Header({ home }) {
     </header>
   );
 }
+
+Header.propTypes = {
+  home: PropTypes.boolean,
+};

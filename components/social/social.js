@@ -1,6 +1,7 @@
 import cn from "classnames";
+import PropTypes from "prop-types";
 
-export default function Social({ home, bottom, cards }) {
+export default function Social({ home, cards }) {
   return (
     <div
       className={cn(
@@ -82,3 +83,8 @@ export default function Social({ home, bottom, cards }) {
     </div>
   );
 }
+
+Social.propTypes = {
+  home: PropTypes.boolean,
+  cards: PropTypes.boolean,
+};

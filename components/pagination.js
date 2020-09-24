@@ -1,8 +1,9 @@
 import Link from "next/link";
+
 import cn from "classnames";
+import PropTypes from "prop-types";
 
 import Button from "./button";
-import Layout from "./layout/layout";
 
 export default function Pagination({ nextPage, prevPage, baseUrl }) {
   return (
@@ -41,3 +42,9 @@ export default function Pagination({ nextPage, prevPage, baseUrl }) {
     </div>
   );
 }
+
+Pagination.propTypes = {
+  nextPage: PropTypes.number,
+  prevPage: PropTypes.number,
+  baseUrl: PropTypes.string.isRequried,
+};

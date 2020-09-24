@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-
-import Layout, { siteName, siteTitle } from "../../components/layout/layout";
-import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
-import Date from "../../components/date";
+
+import { getAllPostIds, getPostData } from "lib/posts";
+import Layout from "components/layout/layout";
+import Date from "components/date";
+import CustomPropTypes from "propTypes";
 
 export default function Post({ postData }) {
   return (
@@ -59,6 +59,10 @@ export default function Post({ postData }) {
     </Layout>
   );
 }
+
+Post.propTypes = {
+  postData: CustomPropTypes.postData,
+};
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();

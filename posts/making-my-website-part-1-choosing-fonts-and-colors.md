@@ -14,7 +14,7 @@ I've been meaning to renew my online home for a while now. I finally found the t
 
 I am a firm believer that everything I make should be done mindfully, and everything should have some meaning and reason behind it. That is surely the case when it comes to choosing even the minor details of designing a website, specially when it's my own.
 
-The first step during the creation of this website was pick colors and fonts that represent me well. In order to achieve my goal, I went into some internal analysis about who I am as a professional and person. In the end my choices were comprised of an Orange and Blue color scheme accompanied by the Cairo and Source Sans/Code.
+The first step during the creation of this website was pick colors and fonts that represent me well. In order to achieve my goal, I went into some internal analysis of who I am as a professional and person. In the end my choices were an Orange and Blue color scheme accompanied by the Cairo and Source Sans/Code.
 
 ## Picking Colors
 
@@ -44,19 +44,19 @@ With my color scheme locked in, it was time for the hardest task: finding fonts 
 
 Picking a font is hard.
 
-At first, I tried studying the meaning of the many available fonts (of which one of my favorites is Gidole's). However, more often than not fonts are meant to convey some sort of info, and not really meant to have a deep meaning behind them (at least not one that I could find).
+At first, I tried studying the meaning of the many available fonts (of which one of my favorites is Gidole's). However, more often than not fonts convey some sort of info, and not really meant to have a deep meaning behind them (at least not one I could find).
 
 Then I decided to step it down a little and settle by finding fonts readily available at Google Fonts, which is a convenient, free and effective way of using web based typefaces on websites.
 
 ### Main Font - A programmer lives by the code.
 
-Upon first inspection the main font was easily spotted. Source Sans Pro, which I quickly added to the body style of my website, to act as the main font. You probably know why I decided to pick this one: Its name! As someone who does coding for a living, having fonts that ping back to that really speaks to me. Therefore, Source Sans is my main font and Source Code is my syntax highlighting/monospace font.
+Upon first inspection the main font was easily spotted. Source Sans Pro, which I quickly added to the body style of my website, to act as the main font. You probably know why I decided to pick this one: Its name! As someone who that codes for a living, having fonts that ping back to that really speaks to me. Therefore, Source Sans is my main font and Source Code is my syntax highlighting/monospace font.
 
 ### Display Font - Is that a JoJo's Reference???
 
-Finally, it was time to find a display kind of font for headers and such. I decided that I want to give a nod to something I do for fun. One of the things I like the most is watching Japanese animations, of which my all time favorite is Jojo's Bizarre Adventure. There is a long tradition (even in western culture) to reference Jojo's and I decided to do the same.
+Finally, it was time to find a display kind of font for headers and such. I decided that I want to give a nod to something I do for fun. One of the things I like the most is watching Japanese animations, of which my all time favorite is Jojo's Bizarre Adventure. There is a long tradition (even in western culture) to reference Jojo's, and I decided to do the same.
 
-After searching for a while, my stardust cruzade around the world of fonts available, I reached my destination: Cairo. Just like the JoJo team does in Stardust Cruzaders.
+After searching for a while, my stardust crusade around the world of fonts available, I reached my destination: Cairo. Just like the JoJo team does in Stardust Crusaders.
 
 ## Conclusion
 
