@@ -12,7 +12,7 @@ export default function NavItem({ href, children, bottom }) {
     <Link href={href}>
       <a
         className={cn(
-          "px-3",
+          "px-1 sm:px-3",
           bottom ? "py-1" : "py-3",
           "mx-1",
           "transition",
