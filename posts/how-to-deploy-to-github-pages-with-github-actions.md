@@ -15,33 +15,35 @@ If you know about CI and Github Pages in general, you can skip this section and 
 
 If you just want the `.yml` config code, you can find it in the [conclusion](#conclusion).
 
-I have done my fair share of website deploying with good ol' FTP over the years. You simply copy the files to the server, and you're good to go. There are however, many downsides of taking that approach which I'm not gonna dive into right now, maybe another post.
+I have done my fair share of website deploying with good ol' FTP over the years. You simply copy the files to the server, and you're good to go. There are however, many downsides of taking that approach which I'm not gonna dive into for this post. Let's discuss a more modern, and actually easier to work with, approach.
 
 ### CI in a nutshell
 
-Nowadays, we do things more automatically with the use of CI (Continuous Integration). TLDR: You integrate the development, version control, build, testing, and deployment of your website into one beautiful continuous cycle, that usually goes:
+Nowadays we do things automatically with the use of CI (Continuous Integration). TLDR: You integrate the development, version control, build, testing, and deployment of your website into one beautiful continuous cycle, that usually goes:
 
 ```sequence
 code > commit > pull request > tests > build > merge > deploy
 ```
 
-The steps from tests to deploy are usually handled by some CI service. There are many like [Circle CI](circleci.org), [Gitlab CI](https://docs.gitlab.com/ee/ci/), and, the one we'll be using here, [Github Actions](https://github.com/features/actions), among MANY others. The reason I mentioned these 3 in specific is that I have used them in the past, and know that they have free plans to get you started. These free plans are probably more than you need for smaller/personal projects.
+The steps from tests to deploy are usually handled by some CI service. There are many like [Circle CI](https://circleci.org), [Gitlab CI](https://docs.gitlab.com/ee/ci/), and the one we'll be using here: [Github Actions](https://github.com/features/actions). The reason I mentioned these 3 in specific is that I have used them in the past and know that they have free plans to get you started. These free plans are probably more than you need for smaller/personal projects. There are however many other services out there that do this.
 
-What these services do is basically run a bunch of shell commands on some server somewhere. You usually have to configure what commands will be executed. There are exceptions, such as (Vercel)[vercel.com] which specializes in Next.js projects and does everything that needs to be done out of the box, so that may be a good solution for you.
+What these services do is basically run a bunch of shell commands on some server somewhere. You usually have to configure what commands will be executed. There are exceptions, such as [Vercel](https://vercel.com) which specializes in Next.js projects and does everything that needs to be done out of the box for that kind of project, so that may be a good solution for you.
 
-### Github Pages TLDR
+If that sounds interesting to you, but you're not building with Next.js, you can probably look it up and find services that do the same for whatever framework you're using.
 
-Github Pages is a free service from github that serves website pages straight from your repo. Keep in mind that you must leave the website public for this to work, so don't use it if you have sensitive code there. In my case, it was perfect, as my website can also serve as a showcase of my work/coding,
+### Github Pages
 
-**Important Info:** Github Pages will, by default, process your pages as if they were built with Jekyll, a blog aware static website generator. If you are not using that, we'll have to tell github pages to skip this step. If you are using jekyll however, you don't even need CI or anything.
+Github Pages is a free service from github that serves website pages straight from your repo. Keep in mind that you must leave the website's code public for this to work, so don't use it if you have sensitive code there. In my case, it was perfect, as my website can also serve as a showcase of my work/coding,
+
+**Important Info:** Github Pages will, by default, process your pages as if they were built with Jekyll, a blog aware static website generator. If you are not using Jekyll to build your website, you will have to tell github pages to skip this step. If you are using jekyll however, you don't even need CI or anything, github pages will build and serve it straight from the repo automatically.
 
 Github pages can serve pages from a variety of sources. You can have your pages in a `gh-pages` branch, or in a `docs` folder inside your master branch. Visit [The Docs](https://pages.github.com/) to find out more. We'll be deploying it to the `gh-pages` branch here.
 
 ### Github Actions
 
-Github actions is a free-to-start CI service from github. There are many pre-made actions that do specific jobs for you. For instance, in this guide we'll be using an action that deploys to github pages using the gh-pages lib.
+Github actions is a free-to-start CI service from github. There are many pre-made actions that do specific jobs for you. For instance, in this guide we'll be using an action that deploys to github pages using the gh-pages lib. There are actions that release libs to NPM, there are ones that run build scripts for many popular frameworks and so on.
 
-## Let's start!
+## Let's get down to business!
 
 Enough with the chatter, let's get going.
 
@@ -49,16 +51,16 @@ Enough with the chatter, let's get going.
 
 First of all, you will need your project (do I even have to say that?).
 
-In my case, I'll be using my own website as an example. This website is build with Next.js. Next.js has the ability to generate a static website (plain old HTML + CSS + JS) that can be run directly in the browser. Here are a few tips for a different kind of websites:
+In my case, I'll be using my own website as an example. This website is built with Next.js. Next.js has the ability to generate a static website (plain old HTML + CSS + JS) that can be run directly in the browser. Here are a few tips for different kind of projects:
 
 - **Plain HTML**: If you are building a plain html static website, you are good to go! Skip to the next step.
-- **React project**: You will need to know about the `build` script, that generates a production ready build of your project.
-- **Next.js project**: In next, you will need to know about the `build` and `export` scripts, that will make the website ready for deploy.
-- **Any other whatever.js project**: You probably have gotten the gist of it by now, just see the docs of your framework on how to make a production build.
+- **React project**: You will need to know about the `build` script. It generates a production ready build of your project.
+- **Next.js project**: With Next, you will need to know about the `build` and `export` scripts, that will make the website ready for deploy.
+- **Any other whatever.js project**: You probably got the gist of it by now, just see the docs of your framework on how to make a production build.
 
 #### REALLY Important Info:
 
-If your project **CANNOT** contain server side rendering (code that runs on the server side after the build) for this. Github pages can only serve a static HTML in the end, there is no server running behind that we can take control of. 
+Your project **CANNOT** contain server side rendering (code that runs on the server side after the build) for this. Github pages can only serve a static HTML in the end, there is no server running behind that we can take control of. 
 
 For instance, my website has Next.js' `getStaticProps` employed in some pages. While this **is** server side code, it only runs at build time and that's fine. If I had been using `getServerSideProps` anywhere it wouldn't work. In that case, I would have to rewrite my code to make data fetching and other stuff that might be going on in the server side to happen at run time on the client side (like instead of querying a database directly, we would instead do a `fetch` on an API)
 
@@ -90,17 +92,17 @@ The plan here is to set up the workflow to go as follows:
 
 1. A new push or pull request happens on Master branch (that will be our "ready for production" branch)
 2. The CI server picks up the updated code with a git checkout
-3. The CI server will set up the Node.js environment (which I need in my case, you may need something else)
-4. The CI server will install the project's dependencies (dev dependencies are installed here too), in my case, with `yarn`
+3. The CI server will set up the Node.js environment (which I need in my case, you may need something else like Python, or PHP, or whatever you're using)
+4. The CI server will install the project's dependencies (dev dependencies are installed here too). In my case, it is done with `yarn`
 5. The CI server will generate the production build (I'm using Next.js build scripts here, you might be using something else)
-6. The CI server will tell github pages (not really) to not process this using Jekyll (because mine is a Next.js project)
+6. The CI server will tell github pages to not process this using Jekyll (because mine is a Next.js project)
 7. The CI server will push the built code to the `gh-pages` branch, thus finishing the deployment process.
 
 The github actions configuration lives in the `.github/workflows/` folder at the root of your project. You can manually create a `main.yml` file there and add the contents below. However, we'll take a look at the Github actions interface first.
 
-First of all, let's create the workflow. Go to https://github.com/your-username/your-username.github.io/actions (this is the Actions link on the top of your project) and click the "New Workflow" button.
+First of all, let's create the workflow. Go to https://github.com/<your-username>/<your-username>.github.io/actions (this is the Actions link at the top on your project's github page). From there click the "New Workflow" button.
 
-Here you can see there is a lot of pre-made workflows for you to choose from. Take a look at those later, as there might be ready-to-use solutions that will work for your projects. We will be going with the "setup a workflow yourself" option.
+Here you can see there are a lot of pre-made workflows for you to choose from. Take a look at those later, as there might be ready-to-use solutions that will work for your projects. We will be going with the "setup a workflow yourself" option.
 
 Github will make a simple boilerplate workflow for you. It's pretty well documented with comments, so take a read there to understand what it does. Let's start workflow-ing our plan from before:
 
@@ -148,7 +150,7 @@ jobs:
 -          echo test, and deploy your project.
 ```
 
-The first step of the plan is already there. It's the checkout code. Note that we are just calling another pre-made action, called `actions/checkout@v2`. This action will get the code from our repo to the CI machine, and we don't have to manually write the commands. This action includes some optimization as well. 
+The first step of the plan is already there. It's the checkout code. Note that we are just calling a pre-made action, called `actions/checkout@v2`. This action will get the code from our repo to the CI machine, and we don't have to manually write the commands. This action includes some optimization as well. 
 <sup><sub>emoji added for fanciness</sub><sup> 
 
 ```yaml
@@ -158,9 +160,9 @@ The first step of the plan is already there. It's the checkout code. Note that w
         uses: actions/checkout@v2
 ```
 
-Next (.js? huh? get it? next.js?), we will be setting up the node environment on the CI machine. Github actions provides us with this handy option that we can add.
+Next (no pun intended), we will be setting up the node environment in the CI machine. Github actions provides us with this handy action that we can use for this.
 
-Once again, we are using another pre-made action, called `action/setup-node@v1`. It expects a `with` parameter specifying a version. If for some reason you need to build using more than one node versions you can also pass an array there, and you can be as specific with the version numbers as you want. 12.x is fine for me.
+Once again, we are using another pre-made action, called `action/setup-node@v1`. It expects a `with` parameter specifying a version. If for some reason you need to build using more than one node version you can also pass an array there, and you can be as specific with the version numbers as you want. 12.x is fine for me.
 
 **`.github/workflows/main.yml`**
 ```diff
