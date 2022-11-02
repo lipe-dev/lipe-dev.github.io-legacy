@@ -27,7 +27,7 @@ export default function Layout({ children, home }) {
         <title>Lipe.dev</title>
       </Head>
       {home && (
-        <a href="https://github.com/you" className="absolute top-0 z-50">
+        <a href="https://github.com/lipe-dev/lipe-dev.github.io" className="absolute top-0 z-50">
           <img
             loading="lazy"
             width="149"
