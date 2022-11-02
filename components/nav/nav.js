@@ -25,12 +25,6 @@ export default function Nav({ home, bottom }) {
       <NavItem href="/" bottom={bottom}>
         Home
       </NavItem>
-      <NavItem href="/posts/list/tech/1" bottom={bottom}>
-        Tech
-      </NavItem>
-      <NavItem href="/posts/list/folio/1" bottom={bottom}>
-        Folio
-      </NavItem>
       <NavItem href="/posts/list/1" bottom={bottom}>
         Blog
       </NavItem>

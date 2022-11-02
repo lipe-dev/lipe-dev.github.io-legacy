@@ -13,16 +13,10 @@ export default function CV() {
       <div className="min-w-full bg-gray-200 py-8">
         <div className="container mx-auto flex flex-col sm:flex-row flex-wrap py-16 justify-around bg-white shadow-diagonal">
           <div className="w-full -mt-8">
-            <Heading subtitle="Software Engineer">
-              Felipe &quot;lipe-dev&quot; Pereira
-            </Heading>
+            <Heading subtitle="Software Engineer">Felipe &quot;lipe-dev&quot; Pereira</Heading>
           </div>
           <div className="w-full sm:w-1/3 lg:w-1/4 prose prose-md md:prose-lg lg:prose-xl p-4 flex items-stretch flex-col">
-            <img
-              src="/images/profile.jpg"
-              alt="Felipe Pereira"
-              className="shadow-diagonal self-center"
-            />
+            <img src="/images/profile.jpg" alt="Felipe Pereira" className="shadow-diagonal self-center" />
             <h2> Contact </h2>
             <ul>
               <li>
@@ -32,9 +26,7 @@ export default function CV() {
                 <a href="tel:+55(48)99112-5743">+55 (48) 99112 - LIPE</a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/felipeicp/">
-                  /in/felipeicp
-                </a>
+                <a href="https://www.linkedin.com/in/felipeicp/">/in/felipeicp</a>
               </li>
               <li>
                 <a href="https://github.com/lipe-dev">github/lipe-dev</a>
@@ -50,10 +42,7 @@ export default function CV() {
 
             <h2>Personal Traits </h2>
             <ul>
-              <li>
-                Lover of all technology. Respect and preserve the old, create
-                the new.
-              </li>
+              <li>Lover of all technology. Respect and preserve the old, create the new.</li>
               <li>Always eager to learn more</li>
               <li>Perseverant and adaptable</li>
               <li>Self teaching</li>
@@ -98,8 +87,7 @@ export default function CV() {
             </h2>
             <ul>
               <li>
-                <strong>Javascript</strong> (React, Next.js, React Native,
-                Redux, JQuery, NodeJS, p5.js, Electron)
+                <strong>Javascript</strong> (React, Next.js, React Native, Redux, JQuery, NodeJS, p5.js, Electron)
               </li>
               <li>
                 <strong>Python</strong> (Django, Django Rest Framework)
@@ -108,28 +96,22 @@ export default function CV() {
                 <strong>PHP</strong> (CakePHP, CodeIgniter)
               </li>
               <li>
-                <strong>HTML5/CSS3</strong> (TailwindCSS, CSS in JS, SASS,
-                Bootstrap, ...)
+                <strong>HTML5/CSS3</strong> (TailwindCSS, CSS in JS, SASS, Bootstrap, ...)
               </li>
               <li>
                 <strong>Java</strong> (Mainly Android)
               </li>
               <li>
-                <strong>Design</strong> (Photoshop, Material Design,
-                Illustrator, InVision, Figma)
+                <strong>Design</strong> (Photoshop, Material Design, Illustrator, InVision, Figma)
               </li>
             </ul>
             <h3>Education</h3>
             <li>
               <strong className="uppercase">
-                Information Systems @{" "}
-                <u>Federal University of Itajubá - Brazil</u>
+                Information Systems @ <u>Federal University of Itajubá - Brazil</u>
               </strong>{" "}
               <br />
-              <i className="pl-8 text-gray-500">
-                From 2010 to 2013 & from 2015 to 2016
-              </i>{" "}
-              <br />
+              <i className="pl-8 text-gray-500">From 2010 to 2013 & from 2015 to 2016</i> <br />
               <span className="pl-8">
                 Bachelor’s Degree <br />
               </span>
@@ -147,36 +129,25 @@ export default function CV() {
             <h3>Work Experience</h3>
             <li>
               <strong className="uppercase">
-                Android Dev Internship @{" "}
-                <a href="https://www.agrotransparencia.com.br/homeenglish">
-                  Safe Trace Café
-                </a>
+                Android Dev Internship @ <a href="https://www.agrotransparencia.com.br/homeenglish">Safe Trace Café</a>
               </strong>
               <br />
-              <i className="pl-8 text-gray-500">From 01/2015 to 09/2015</i>{" "}
-              <br />
-              <span className="pl-8">
-                Mostly working with the company’s Android app for food products
-                tracking.
-              </span>
+              <i className="pl-8 text-gray-500">From 01/2015 to 09/2015</i> <br />
+              <span className="pl-8">Mostly working with the company’s Android app for food products tracking.</span>
             </li>
             <li>
               <strong className="uppercase">
-                Android Dev & Full Stack Dev & Dev Ops @{" "}
-                <u>Utyl Business Platforms</u>
+                Android Dev & Full Stack Dev & Dev Ops @ <u>Utyl Business Platforms</u>
               </strong>
               <br />
-              <i className="pl-8 text-gray-500">From 09/2015 to 11/2016</i>{" "}
-              <br />
+              <i className="pl-8 text-gray-500">From 09/2015 to 11/2016</i> <br />
               <span className="pl-8">
-                Mostly working with PHP, CodeIgniter, Android, HTML5 and CSS3
-                (and frameworks), and Databases while developing internal
-                systems and apps.
+                Mostly working with PHP, CodeIgniter, Android, HTML5 and CSS3 (and frameworks), and Databases while
+                developing internal systems and apps.
               </span>{" "}
               <span className="pl-8 mt-2">
-                Developing many websites for clients, including static websites,
-                wordpress themes, custom wordpress plugins, custom systems and
-                mobile apps.
+                Developing many websites for clients, including static websites, wordpress themes, custom wordpress
+                plugins, custom systems and mobile apps.
               </span>
             </li>
             <li>
@@ -187,36 +158,53 @@ export default function CV() {
               <i className="pl-8 text-gray-500">From 11/2016 to 11/2018</i>
               <br />
               <span className="pl-8">
-                Mostly working with Python/Django, Android, and Javascript/React
-                alongside HTML5/CSS3.{" "}
+                Mostly working with Python/Django, Android, and Javascript/React alongside HTML5/CSS3.{" "}
               </span>
             </li>
             <li>
               <strong className="uppercase">
-                Software Analyst @{" "}
-                <a href="https://www.eldorado.org.br/?lang=en">
-                  Instituto Eldorado
-                </a>
+                Software Analyst @ <a href="https://www.eldorado.org.br/?lang=en">Instituto Eldorado</a>
               </strong>
               <br />
-              <i className="pl-8 text-gray-500">From 11/2018 to 05/2019</i>{" "}
-              <br />
+              <i className="pl-8 text-gray-500">From 11/2018 to 05/2019</i> <br />
               <span className="pl-8">
-                Working with many R&D projects, mostly related to Android
-                devices for Motorola
+                Working with many R&D projects, mostly related to Android devices for Motorola
               </span>
             </li>
             <li>
               <strong className="uppercase">
-                Sr. Front-End Engineer @{" "}
-                <a href="https://loadsmart.com">Loadsmart.com</a>{" "}
+                Sr. Front-End Engineer @ <a href="https://loadsmart.com">Loadsmart.com</a>{" "}
               </strong>
               <br />
-              <i className="pl-8 text-gray-500">From 05/2019 to Present Day</i>
+              <i className="pl-8 text-gray-500">From 05/2019 to 06/2021</i>
               <br />
               <span className="pl-8">
-                Mainly focused on React, in a variety of front-end projects.
-                Some Django here and there.
+                Mainly focused on React, in a variety of front-end projects. Some Django here and there.
+              </span>
+            </li>
+            <li>
+              <strong className="uppercase">
+                Sr. Front-End Engineer @ <a href="https://giphy.com">Giphy.com</a>{" "}
+              </strong>
+              <br />
+              <i className="pl-8 text-gray-500">From 06/2021 to 11/2021</i>
+              <br />
+              <span className="pl-8">
+                Mainly focused on React, developing features for Giphy's main website. Some work also on their SDK and
+                overall front-end infrastructure as well.
+              </span>
+            </li>
+            <li>
+              <strong className="uppercase">
+                Sr. Front-End Engineer @ <a href="https://logrock.com">LogRock.com</a>{" "}
+              </strong>
+              <br />
+              <i className="pl-8 text-gray-500">From 11/2021 to Present Day</i>
+              <br />
+              <span className="pl-8">
+                Lead front-end engineer, building all of LogRock's front-end systems and related infrastructure from
+                scratch. All work revolving around React's ecosystem, including: Website in Gatsby, Web-app in Next.js,
+                an open source component library with Vite.js and a ton of internal tools.
               </span>
             </li>
           </div>
