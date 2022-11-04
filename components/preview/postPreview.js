@@ -46,7 +46,7 @@ export default function PostPreview({ post, round }) {
               round ? "object-contain" : "object-cover",
               round
                 ? "w-40 h-40 md:w-64 md:max-h-64 lg:w-56 lg:h-56"
-                : "w-full",
+                : "w-full h-full",
               "transition",
               "duration-1000",
               { "rounded-full": round },
